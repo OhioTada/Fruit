@@ -78,6 +78,14 @@ return function (RouteBuilder $routes): void {
         $builder->fallbacks();
     });
 
+    $routes->prefix('Admin', function (RouteBuilder $routes) {
+        // All routes here will be prefixed with `/admin`, and
+        // have the `'prefix' => 'Admin'` route element added that
+        // will be required when generating URLs for these routes
+        $routes->fallbacks('InflectedRoute');
+        $routes->connect('/', ['controller' => 'Admin', 'action' => 'index']);
+        $routes->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+    });
 
     /*
      * If you need a different set of middleware or none at all,

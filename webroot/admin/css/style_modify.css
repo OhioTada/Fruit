@@ -1,0 +1,17 @@
+/* css modify for admin */
+.blk-center__box label.error {
+    text-align: left;
+    color: #c30c0c;
+    margin: 15px 0;
+    font-size: 12px;
+    font-weight: unset;
+    display: inline-block;
+    width: 100%;
+}
+.blk-center__box .message.error{
+    color: #c30c0c;
+    margin: 0 0 15px;
+    font-size: 12px;
+    text-align: center;
+}
+/*end css modify for admin */

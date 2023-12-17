@@ -3,14 +3,13 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-
-use \App\Controller\AppController;
+use App\Controller\AppController;
 
 /**
- * Dashboard Controller
+ * Accounts Controller
  *
  */
-class DashboardController extends AdminController
+class AccountsController extends AdminController
 {
     /**
      * Index method

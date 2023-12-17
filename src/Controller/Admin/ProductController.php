@@ -3,14 +3,13 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-
-use \App\Controller\AppController;
+use App\Controller\AppController;
 
 /**
- * Dashboard Controller
+ * Product Controller
  *
  */
-class DashboardController extends AdminController
+class ProductController extends AdminController
 {
     /**
      * Index method
@@ -20,5 +19,13 @@ class DashboardController extends AdminController
     public function index()
     {
        
+    }
+    public function add()
+    {
+        
+    }
+    public function edit()
+    {
+        
     }
 }
