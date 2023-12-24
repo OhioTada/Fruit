@@ -1,30 +1,30 @@
 
 <div id="reportsPage">
 <div id="home">
-    <?= $this->element('admin/head');?>
+    <?= $this->element('admin/head');?>                   
     <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Welcome back, <b>Admin</b></p>
+                    <p class="text-white mt-5 mb-5"> <?= __("Welcome back"); ?>, <b> <?php  if(isset($user)){ echo $user->loginId;} ?></b></p>
                 </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <h2 class="tm-block-title"><?= __("Latest Hits"); ?></h2>
                         <canvas id="lineChart"></canvas>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Performance</h2>
+                        <h2 class="tm-block-title"><?= __("Performance"); ?></h2>
                         <canvas id="barChart"></canvas>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller">
-                        <h2 class="tm-block-title">Storage Information</h2>
+                        <h2 class="tm-block-title"><?= __("Storage Information"); ?></h2>
                         <div id="pieChartContainer">
                             <canvas id="pieChart" class="chartjs-render-monitor" width="200" height="200"></canvas>
                         </div>                        

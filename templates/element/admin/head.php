@@ -1,7 +1,8 @@
+
 <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
-                    <h1 class="tm-site-title mb-0">Product Admin</h1>
+                <a class="navbar-brand" href="<?= $this->Url->build(['controller' => 'Dashboard', 'action' => 'index']) ?>">
+                    <h1 class="tm-site-title mb-0"><?= __('Product Admin'); ?></h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +12,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="<?= $this->Url->build(['controller' => 'Dashboard', 'action' => 'index']) ?>">
                                 <i class="fas fa-tachometer-alt"></i>
-                                Dashboard
+                                <?= __('Dashboard'); ?> 
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -23,26 +24,26 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-file-alt"></i>
                                 <span>
-                                    Reports <i class="fas fa-angle-down"></i>
+                                <?= __('Reports'); ?> <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Daily Report</a>
-                                <a class="dropdown-item" href="#">Weekly Report</a>
-                                <a class="dropdown-item" href="#">Yearly Report</a>
+                                <a class="dropdown-item" href="#"> <?= __('Daily Report'); ?></a>
+                                <a class="dropdown-item" href="#"><?= __('Weekly Report'); ?></a>
+                                <a class="dropdown-item" href="#"><?= __('Yearly Report'); ?></a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="products.html">
+                            <a class="nav-link" href="<?= $this->Url->build(['controller' => 'products', 'action' => 'index']) ?>">
                                 <i class="fas fa-shopping-cart"></i>
-                                Products
+                                <?= __('Products'); ?> 
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="accounts.html">
+                            <a class="nav-link" href="<?= $this->Url->build(['controller' => 'accounts', 'action' => 'index']) ?>">
                                 <i class="far fa-user"></i>
-                                Accounts
+                                <?= __('Accounts'); ?> 
                             </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -50,21 +51,28 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-cog"></i>
                                 <span>
-                                    Settings <i class="fas fa-angle-down"></i>
+                                <?= __('Settings'); ?>  <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Billing</a>
-                                <a class="dropdown-item" href="#">Customize</a>
+                                <a class="dropdown-item" href="#"><?= __('Profile'); ?></a>
+                                <a class="dropdown-item" href="#"><?= __('Billing'); ?></a>
+                                <a class="dropdown-item" href="#"><?= __('Customize'); ?></a>
                             </div>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link d-block" href="login.html">
-                                Admin, <b>Logout</b>
-                            </a>
+                            <div class="nav-link d-block">
+                                <?php 
+                                    if(isset($user)){
+                                        echo $user->loginId;
+                                        ?>
+                                        <a href=<?= $this->Url->build(['controller' => 'users', 'action' => 'logout']) ?>>
+                                            <b><?= __('Logout'); ?></b>
+                                        </a>
+                                <?php  } ?>    
+                            </div>
                         </li>
                     </ul>
                 </div>

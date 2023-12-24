@@ -19,6 +19,7 @@ class DashboardController extends AdminController
      */
     public function index()
     {
-       
+        $userLogin = $this->getSession->read('Auth')->loginId;
+        $this->set('$userLogin', $userLogin);
     }
 }

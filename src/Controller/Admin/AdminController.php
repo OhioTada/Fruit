@@ -28,7 +28,7 @@ class AdminController extends Controller
         $result = $this->Authentication->getResult();
         $this->user = $result->getData();
         $this->set('user', $result->getData());
-
+        $this->getSession = $this->getRequest()->getSession();
         // $this->createLog();
 
     }

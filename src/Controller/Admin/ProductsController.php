@@ -9,7 +9,7 @@ use App\Controller\AppController;
  * Product Controller
  *
  */
-class ProductController extends AdminController
+class ProductsController extends AdminController
 {
     /**
      * Index method

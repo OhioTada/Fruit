@@ -64,6 +64,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             );
         }
         $this->addPlugin('Authentication');
+        $this->addPlugin('Migrations');
         if (Configure::read('debug')) {
             $this->addPlugin('DebugKit');
         }
@@ -100,6 +101,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
              // ... other middleware added before
             // add Authentication after RoutingMiddleware
             ->add(new AuthenticationMiddleware($this))
+            
 
             // Cross Site Request Forgery (CSRF) Protection Middleware
             // https://book.cakephp.org/4/en/security/csrf.html#cross-site-request-forgery-csrf-middleware
