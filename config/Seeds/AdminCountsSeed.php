@@ -23,7 +23,7 @@ class AdminCountsSeed extends AbstractSeed
         
         $data = [
             [
-                'name'    => 'admin',
+                'loginId'    => 'admin',
                 'password'    => '$2y$10$aQgshs1Ub12qxFsrl.QwHuHD/qUGTaYqe246X1uSu78IY7newtUWO',
                 'phone'    => '0988686868',
                 'avatar'    => '../img/admin/abc.png',

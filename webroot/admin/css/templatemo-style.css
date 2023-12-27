@@ -12,7 +12,7 @@ html {
 }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: #4e657a;
+  background-color: #fff;
   overflow-x: hidden;
 }
 a {
@@ -41,7 +41,7 @@ button:focus {
 }
 .navbar {
   height: 100px;
-  background-color: #567086;
+  background-color: #81c408;
   padding: 0;
 }
 .navbar .container {
@@ -278,13 +278,13 @@ thead {
   padding-right: 15px;
 }
 .form-control {
-  background-color: #54657d;
-  color: #fff;
+  background-color: #567493;
+  color: #badbf9;
   border: 0;
 }
 .form-control:focus {
-  background-color: #60738e;
-  color: #fff;
+  background-color: #567493;
+  color: #badbf9;
   border-color: transparent;
   box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
 }
@@ -374,7 +374,7 @@ thead {
   color: #a0c0de;
 }
 .tm-bg-primary-dark {
-  background-color: #435c70;
+  background-color: #45595b;
 }
 .tm-bg-gray {
   background-color: rgba(0, 0, 0, 0.05);

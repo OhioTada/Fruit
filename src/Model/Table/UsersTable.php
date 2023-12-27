@@ -39,9 +39,9 @@ class UsersTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('users');
+        $this->setTable('admin_counts');
         $this->setDisplayField('loginId');
-        $this->setPrimaryKey('loginId');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }
@@ -55,10 +55,32 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
+            ->scalar('loginId')
+            ->maxLength('loginId', 256)
+            ->requirePresence('loginId', 'create')
+            ->notEmptyString('loginId');
+
+        $validator
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmptyString('email');
+
+        $validator
             ->scalar('password')
             ->maxLength('password', 256)
             ->requirePresence('password', 'create')
             ->notEmptyString('password');
+
+        $validator
+            ->integer('phone')
+            ->requirePresence('phone', 'create')
+            ->notEmptyString('phone');
+
+        $validator
+            ->scalar('avatar')
+            ->maxLength('avatar', 256)
+            ->requirePresence('avatar', 'create')
+            ->notEmptyString('avatar');
 
         $validator
             ->scalar('function')
