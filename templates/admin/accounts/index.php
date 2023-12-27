@@ -2,7 +2,7 @@
 <div class="container mt-5">
         <div class="row tm-content-row">
           <div class="col-12 tm-block-col">
-            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="tm-bg-primary-cm tm-block tm-block-h-auto">
               <h2 class="tm-block-title">List of Accounts</h2>
               <p class="text-white">Accounts</p>
               <select class="custom-select">
@@ -18,7 +18,7 @@
         <!-- row -->
         <div class="row tm-content-row">
           <div class="tm-block-col tm-col-avatar">
-            <div class="tm-bg-primary-dark tm-block tm-block-avatar">
+            <div class="tm-bg-primary-cm tm-block tm-block-avatar">
               <h2 class="tm-block-title">Change Avatar</h2>
               <div class="tm-avatar-container">
                 <img
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="tm-block-col tm-col-account-settings">
-            <div class="tm-bg-primary-dark tm-block tm-block-settings">
+            <div class="tm-bg-primary-cm tm-block tm-block-settings">
               <h2 class="tm-block-title">Account Settings</h2>
               <form action="" class="tm-signup-form row">
                 <div class="form-group col-lg-6">

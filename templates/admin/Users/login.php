@@ -2,7 +2,7 @@
 <div class="container tm-mt-big tm-mb-big">
       <div class="row">
         <div class="col-12 mx-auto tm-login-col">
-          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+          <div class="tm-bg-primary-cm tm-block tm-block-h-auto">
             <div class="row">
               <div class="col-12 text-center">
                 <h2 class="tm-block-title mb-4"><?= __("Welcome to Dashboard, Login"); ?></h2>
