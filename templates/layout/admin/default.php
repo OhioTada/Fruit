@@ -31,6 +31,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="/admin/css/templatemo-style.css">
     <link rel="stylesheet" href="/admin/css/style_modify.css">
+    <link href="/css/theme.css" rel="stylesheet">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
