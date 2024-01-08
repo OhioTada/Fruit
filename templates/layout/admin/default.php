@@ -51,12 +51,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="/admin/js/moment.min.js"></script>
     <!-- https://momentjs.com/ -->
     <script src="/admin/js/Chart.min.js"></script>
-    <!-- http://www.chartjs.org/docs/latest/ -->
-    <script src="/admin/js/bootstrap.min.js"></script>
+   
     <!-- https://getbootstrap.com/ -->
-    <script src="/admin/js/tooplate-scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
     <?= $this->Html->script('/admin/js/jquery.validate.min.js') ?>
-    <script src="/admin/js/product.js"></script>
     <script src="/admin/js/setting.js"></script>
     <script>
         Chart.defaults.global.defaultFontColor = 'white';

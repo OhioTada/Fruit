@@ -26155,3 +26155,29 @@ a:hover .text-inherit {
 .leaflet-popup {
     margin-bottom: 2.5rem
 }
+.product-add .custom-select{
+    height: 50px;
+    border-radius: 0 3px 3px 0;
+    border: 0.0625rem solid rgba(231,234,243,.7);
+    margin-left: -1px;
+    padding: 0;
+    min-width: 60px;
+    padding: 5px 25px 5px 10px;
+    background: url(../img/img-arrow.png) 80% no-repeat #fff;
+    background-size: 10px auto;
+    text-align: center;
+    box-shadow: none;
+}
+.product-add .custom-select:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.product-add .custom-select--full{
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    border-radius: 3px;
+    position: relative;
+    background: url(../img/img-arrow.png) 98% no-repeat #fff;
+    background-size: 10px auto;
+}
