@@ -35,10 +35,7 @@ class CreateProducts extends AbstractMigration
             'limit' => 11,
             'null' => false,
         ]);
-        $table->addColumn('expireDate', 'timestamp', [
-            'default' => null,
-            'null' => false,
-        ]);
+       
         $table->addColumn('SKU', 'string', [
             'default' => null,
             'limit' => 256,
@@ -53,14 +50,38 @@ class CreateProducts extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
-        $table->addColumn('quanlity', 'integer', [
+        $table->addColumn('weight', 'integer', [
             'default' => null,
             'limit' => 11,
             'null' => false,
         ]);
-        $table->addColumn('quanlitySold', 'integer', [
+        $table->addColumn('quantity', 'integer', [
             'default' => null,
             'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addColumn('quantitySold', 'integer', [
+            'default' => null,
+            'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addColumn('branch', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
+        $table->addColumn('Collections', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
+        $table->addColumn('tags', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
+        $table->addColumn('expireDate', 'timestamp', [
+            'default' => null,
             'null' => false,
         ]);
         $table->addColumn('created', 'datetime', [

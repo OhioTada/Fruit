@@ -10,10 +10,10 @@
                 <thead>
                   <tr>
                     <th scope="col">&nbsp;</th>
-                    <th scope="col">PRODUCT NAME</th>
-                    <th scope="col">UNIT SOLD</th>
-                    <th scope="col">IN STOCK</th>
-                    <th scope="col">EXPIRE DATE</th>
+                    <th scope="col"><?= __("PRODUCT NAME"); ?></th>
+                    <th scope="col"><?= __("UNIT SOLD"); ?></th>
+                    <th scope="col"><?= __("IN STOCK"); ?></th>
+                    <th scope="col"><?= __("EXPIRE DATE"); ?></th>
                     <th scope="col">&nbsp;</th>
                   </tr>
                 </thead>
@@ -155,7 +155,7 @@
             </div>
             <!-- table container -->
             <a
-              href="add-product.html"
+              href="<?= $this->Url->build(['controller' => 'products', 'action' => 'add']) ?>"
               class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
             <button class="btn btn-primary btn-block text-uppercase">
               Delete selected products

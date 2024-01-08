@@ -184,22 +184,14 @@
             <h4 class="card-header-title">Media</h4>
 
             <!-- Dropdown -->
-            <div class="dropdown">
-              <a class="btn btn-ghost-secondary btn-sm" href="#!" id="mediaDropdown" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Add media from URL <i class="bi-chevron-down"></i>
-              </a>
-
-              <div class="dropdown-menu dropdown-menu-end mt-1">
-                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"
-                  data-bs-target="#addImageFromURLModal">
-                  <i class="bi-link dropdown-item-icon"></i> Add image from URL
-                </a>
-                <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#embedVideoModal">
-                  <i class="bi-youtube dropdown-item-icon"></i> Embed video
-                </a>
-              </div>
-            </div>
+            <div class="tom-select-custom">
+                    <select class="custom-select tm-select-accounts custom-select--full" id="tomselect-4">
+                      <option value="1" selected>Add media from URL</option>
+                      <option value="2">Add image from URL</option>
+                      <option value="3">Embed video</option>
+                    </select>
+                  </div>
+          
             <!-- End Dropdown -->
           </div>
           <!-- End Header -->
@@ -209,11 +201,8 @@
             <!-- Dropzone -->
             <div id="attachFilesNewProjectLabel" class="js-dropzone dz-dropzone dz-dropzone-card dz-clickable">
               <div class="dz-message">
-                <img class="avatar avatar-xl avatar-4x3 mb-3" src="./assets/svg/illustrations/oc-browse.svg"
+                <img class="avatar avatar-xl avatar-4x3 mb-3" src="/admin/img/oc-browse.svg"
                   alt="Image Description" data-hs-theme-appearance="default">
-                <img class="avatar avatar-xl avatar-4x3 mb-3" src="./assets/svg/illustrations-light/oc-browse.svg"
-                  alt="Image Description" data-hs-theme-appearance="dark">
-
                 <h5>Drag and drop your file here</h5>
 
                 <p class="mb-2">or</p>
@@ -248,30 +237,13 @@
                 <div class="col-sm-4 mb-2 mb-sm-0">
                   <!-- Select -->
                   <div class="tom-select-custom">
-                    <select class="js-select form-select tomselected ts-hidden-accessible" data-hs-tom-select-options="{
-                                &quot;searchInDropdown&quot;: false,
-                                &quot;hideSearch&quot;: true
-                              }" id="tomselect-2" tabindex="-1">
-
+                    <select class="custom-select tm-select-accounts custom-select--full" id="tomselect-3">
+                      <option value="Size" selected>Size</option>
                       <option value="Color">Color</option>
                       <option value="Material">Material</option>
                       <option value="Style">Style</option>
                       <option value="Title">Title</option>
-                      <option value="Size">Size</option>
                     </select>
-                    <div
-                      class="ts-wrapper js-select form-select single plugin-change_listener plugin-hs_smart_position input-hidden full has-items">
-                      <div class="ts-control">
-                        <div data-value="Size" class="item" data-ts-item="">Size</div>
-                      </div>
-                      <div class="tom-select-custom">
-                        <div class="ts-dropdown single plugin-change_listener plugin-hs_smart_position"
-                          style="display: none;">
-                          <div role="listbox" tabindex="-1" class="ts-dropdown-content" id="tomselect-2-ts-dropdown">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <!-- End Select -->
                 </div>
@@ -298,11 +270,8 @@
                 <div class="col-sm-4 mb-2 mb-sm-0">
                   <!-- Select -->
                   <div class="tom-select-custom">
-                    <select class="js-select-dynamic form-select" data-hs-tom-select-options="{
-                                &quot;searchInDropdown&quot;: false,
-                                &quot;hideSearch&quot;: true
-                              }">
-                      <option value="Size">Size</option>
+                    <select class="custom-select tm-select-accounts custom-select--full" id="tomselect-3">
+                      <option value="Size" selected>Size</option>
                       <option value="Color">Color</option>
                       <option value="Material">Material</option>
                       <option value="Style">Style</option>
@@ -493,19 +462,6 @@
               </div>
             </div>
             <!-- End Form -->
-
-            <div class="mb-2">
-              <a class="d-inline-block" href="javascript:;" data-bs-toggle="modal"
-                data-bs-target="#productsAdvancedFeaturesModal">
-                <i class="bi-star-fill fs-4 text-warning me-1"></i> Set "Compare to" price
-              </a>
-            </div>
-
-            <a class="d-inline-block" href="javascript:;" data-bs-toggle="modal"
-              data-bs-target="#productsAdvancedFeaturesModal">
-              <i class="bi-star-fill fs-4 text-warning me-1"></i> Bulk discount pricing
-            </a>
-
             <hr class="my-4">
 
             <!-- Form Switch -->
