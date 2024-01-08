@@ -37,4 +37,5 @@ $('.js-submit').on('click', function () {
         // submitHandler: function(form) { form.summit() }
     })
 
-})
+});
+

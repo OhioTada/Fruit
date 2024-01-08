@@ -1,4 +1,5 @@
 <?= $this->element('admin/head'); ?>
+<div class="product-add">
 <div class="content container-fluid">
       <!-- Page Header -->
       <div class="page-header">
@@ -541,4 +542,6 @@
         <!-- End Card -->
       </div>
     </div>
+</div>
+
 <?= $this->element('admin/footer'); ?>

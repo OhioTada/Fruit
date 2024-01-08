@@ -44,6 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <!-- Template Stylesheet -->
         <link href="/css/style.css" rel="stylesheet">
+      
         
     </head>
 <body>

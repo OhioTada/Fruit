@@ -29,9 +29,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
+   
+    <link href="/admin/css/theme.css" rel="stylesheet">
+    <link href="/admin/css/vendor.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/admin/css/templatemo-style.css">
     <link rel="stylesheet" href="/admin/css/style_modify.css">
-    <link href="/css/theme.css" rel="stylesheet">
+    
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -52,6 +56,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- https://getbootstrap.com/ -->
     <script src="/admin/js/tooplate-scripts.js"></script>
     <?= $this->Html->script('/admin/js/jquery.validate.min.js') ?>
+    <script src="/admin/js/product.js"></script>
     <script src="/admin/js/setting.js"></script>
     <script>
         Chart.defaults.global.defaultFontColor = 'white';
