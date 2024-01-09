@@ -20,26 +20,27 @@ class ProductsSeed extends AbstractSeed
      */
     public function run(): void
     {
-        $data = [
-            [
-                'name'    => 'Grapes',
-                'desc'    => 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt',
-                'image'    => '/img/best-product-5.jpg',
-                'categoryId'    => '01',
-                'SKU'    => '0001',
-                'price'    => '4.99',
-                'discountPercent'    => '0',
-                'weight'    => '1',
-                'quantity'    => '1000',
-                'quantitySold'    => '60',
-                'branch'    => 'American',
-                'Collections'    => 'winter',
-                'tags'    => 'winder',
-                'expireDate' => Date('Y-m-d H:i:s', strtotime('+10 days')),
-                'created' => date('Y-m-d H:i:s'),
-                'modified' => date('Y-m-d H:i:s'),
-            ],
-        ];
+        // $data = [
+        //     [
+        //         'name'    => 'Grapes',
+        //         'desc'    => 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt',
+        //         'image'    => '/img/best-product-5.jpg',
+        //         'categoryId'    => '01',
+        //         'SKU'    => '0001',
+        //         'price'    => '4.99',
+        //         'discountPercent'    => '0',
+        //         'weight'    => '1',
+        //         'quantity'    => '1000',
+        //         'quantitySold'    => '60',
+        //         'branch'    => 'American',
+        //         'Collections'    => 'winter',
+        //         'tags'    => 'winder',
+        //         'expireDate' => Date('Y-m-d H:i:s', strtotime('+10 days')),
+        //         'created' => date('Y-m-d H:i:s'),
+        //         'modified' => date('Y-m-d H:i:s'),
+        //     ],
+        // ];
+        $data =[];
 
         $table = $this->table('products');
         $table->insert($data)->save();

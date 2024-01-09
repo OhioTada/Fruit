@@ -7,19 +7,19 @@
         <div class="col-sm mb-2 mb-sm-0">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-no-gutter">
-              <li class="breadcrumb-item"><a class="breadcrumb-link" href="./ecommerce-products.html">Products</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Add Product</li>
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?= __("Products"); ?></a></li>
+              <li class="breadcrumb-item active" aria-current="page"><?= __("Add Product"); ?></li>
             </ol>
           </nav>
 
-          <h1 class="page-header-title">Add Product</h1>
+          <h1 class="page-header-title"><?= __("Add Product"); ?></h1>
 
           <div class="mt-2">
             <a class="text-body me-3" href="javascript:;">
-              <i class="bi-clipboard me-1"></i> Duplicate
+              <i class="bi-clipboard me-1"></i> <?= __("Duplicate"); ?>
             </a>
             <a class="text-body" href="javascript:;">
-              <i class="bi-eye me-1"></i> Preview
+              <i class="bi-eye me-1"></i>  <?= __("Preview"); ?>
             </a>
           </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="card mb-3 mb-lg-5">
           <!-- Header -->
           <div class="card-header">
-            <h4 class="card-header-title">Product information</h4>
+            <h4 class="card-header-title"><?= __("Product information"); ?></h4>
           </div>
           <!-- End Header -->
 
@@ -43,7 +43,7 @@
           <div class="card-body">
             <!-- Form -->
             <div class="mb-4">
-              <label for="productNameLabel" class="form-label">Name <i class="bi-question-circle text-body ms-1"
+              <label for="productNameLabel" class="form-label"><?= __("Name"); ?> <i class="bi-question-circle text-body ms-1"
                   data-bs-toggle="tooltip" data-bs-placement="top"
                   aria-label="Products are the goods or services you sell."></i></label>
 
@@ -56,7 +56,7 @@
               <div class="col-sm-6">
                 <!-- Form -->
                 <div class="mb-4">
-                  <label for="SKULabel" class="form-label">SKU</label>
+                  <label for="SKULabel" class="form-label"><?= __("SKU"); ?> </label>
 
                   <input type="text" class="form-control" name="SKU" id="SKULabel" placeholder="eg. 348121032"
                     aria-label="eg. 348121032">
@@ -68,7 +68,7 @@
               <div class="col-sm-6">
                 <!-- Form -->
                 <div class="mb-4">
-                  <label for="weightLabel" class="form-label">Weight</label>
+                  <label for="weightLabel" class="form-label"><?= __("Weight"); ?></label>
 
                   <div class="input-group">
                     <input type="text" class="form-control" name="weightName" id="weightLabel" placeholder="0.0"
@@ -88,8 +88,7 @@
                     </div>
                   </div>
 
-                  <small class="form-text">Used to calculate shipping rates at checkout and label prices during
-                    fulfillment.</small>
+                  <small class="form-text"><?= __("Used to calculate shipping rates at checkout and label prices during fulfillment."); ?></small>
                 </div>
                 <!-- End Form -->
               </div>
@@ -97,79 +96,11 @@
             </div>
             <!-- End Row -->
 
-            <label class="form-label">Description <span class="form-label-secondary">(Optional)</span></label>
+            <label class="form-label"><?= __("Description"); ?> <span class="form-label-secondary"><?= __("(Optional)"); ?></span></label>
 
             <!-- Quill -->
             <div class="quill-custom">
-              <div class="ql-toolbar ql-snow"><span class="ql-formats"><button type="button" class="ql-bold"><svg
-                      viewBox="0 0 18 18">
-                      <path class="ql-stroke"
-                        d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path>
-                      <path class="ql-stroke"
-                        d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
-                      </path>
-                    </svg></button><button type="button" class="ql-italic"><svg viewBox="0 0 18 18">
-                      <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
-                      <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
-                      <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
-                    </svg></button><button type="button" class="ql-underline"><svg viewBox="0 0 18 18">
-                      <path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path>
-                      <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect>
-                    </svg></button><button type="button" class="ql-strike"><svg viewBox="0 0 18 18">
-                      <line class="ql-stroke ql-thin" x1="15.5" x2="2.5" y1="8.5" y2="9.5"></line>
-                      <path class="ql-fill"
-                        d="M9.007,8C6.542,7.791,6,7.519,6,6.5,6,5.792,7.283,5,9,5c1.571,0,2.765.679,2.969,1.309a1,1,0,0,0,1.9-.617C13.356,4.106,11.354,3,9,3,6.2,3,4,4.538,4,6.5a3.2,3.2,0,0,0,.5,1.843Z">
-                      </path>
-                      <path class="ql-fill"
-                        d="M8.984,10C11.457,10.208,12,10.479,12,11.5c0,0.708-1.283,1.5-3,1.5-1.571,0-2.765-.679-2.969-1.309a1,1,0,1,0-1.9.617C4.644,13.894,6.646,15,9,15c2.8,0,5-1.538,5-3.5a3.2,3.2,0,0,0-.5-1.843Z">
-                      </path>
-                    </svg></button><button type="button" class="ql-link"><svg viewBox="0 0 18 18">
-                      <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
-                      <path class="ql-even ql-stroke"
-                        d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
-                      </path>
-                      <path class="ql-even ql-stroke"
-                        d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
-                      </path>
-                    </svg></button><button type="button" class="ql-image"><svg viewBox="0 0 18 18">
-                      <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect>
-                      <circle class="ql-fill" cx="6" cy="7" r="1"></circle>
-                      <polyline class="ql-even ql-fill" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline>
-                    </svg></button><button type="button" class="ql-blockquote"><svg viewBox="0 0 18 18">
-                      <rect class="ql-fill ql-stroke" height="3" width="3" x="4" y="5"></rect>
-                      <rect class="ql-fill ql-stroke" height="3" width="3" x="11" y="5"></rect>
-                      <path class="ql-even ql-fill ql-stroke" d="M7,8c0,4.031-3,5-3,5"></path>
-                      <path class="ql-even ql-fill ql-stroke" d="M14,8c0,4.031-3,5-3,5"></path>
-                    </svg></button><button type="button" class="ql-code"><svg viewBox="0 0 18 18">
-                      <polyline class="ql-even ql-stroke" points="5 7 3 9 5 11"></polyline>
-                      <polyline class="ql-even ql-stroke" points="13 7 15 9 13 11"></polyline>
-                      <line class="ql-stroke" x1="10" x2="8" y1="5" y2="13"></line>
-                    </svg></button><button type="button" class="ql-list" value="bullet"><svg viewBox="0 0 18 18">
-                      <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line>
-                      <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line>
-                      <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line>
-                      <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line>
-                      <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line>
-                      <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line>
-                    </svg></button></span></div>
-              <div class="js-quill ql-container ql-snow hs-quill-initialized" style="height: 15rem;"
-                data-hs-quill-options="{
-                     &quot;placeholder&quot;: &quot;Type your description...&quot;,
-                      &quot;modules&quot;: {
-                        &quot;toolbar&quot;: [
-                          [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;, &quot;link&quot;, &quot;image&quot;, &quot;blockquote&quot;, &quot;code&quot;, {&quot;list&quot;: &quot;bullet&quot;}]
-                        ]
-                      }
-                     }">
-                <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
-                  data-placeholder="Type your description...">
-                  <p><br></p>
-                </div>
-                <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
-                <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank"
-                    href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com"
-                    data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div>
-              </div>
+              <div id="editor-pdf"></div>
             </div>
             <!-- End Quill -->
           </div>
