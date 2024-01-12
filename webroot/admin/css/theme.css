@@ -26175,9 +26175,9 @@ a:hover .text-inherit {
 .product-add .custom-select--full{
     width: 100%;
     text-align: left;
-    padding: 5px 10px;
+    padding: 5px 25px 5px 10px;
     border-radius: 3px;
     position: relative;
-    background: url(../img/img-arrow.png) 98% no-repeat #fff;
+    background: url(../img/img-arrow.png) calc(100% - 10px) no-repeat #fff;
     background-size: 10px auto;
 }

@@ -57,32 +57,36 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="/admin/js/tooplate-scripts.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
     <?= $this->Html->script('/admin/js/jquery.validate.min.js') ?>
     <script src="/admin/js/setting.js"></script>
     <script>
-        Chart.defaults.global.defaultFontColor = 'white';
-        let ctxLine,
-            ctxBar,
-            ctxPie,
-            optionsLine,
-            optionsBar,
-            optionsPie,
-            configLine,
-            configBar,
-            configPie,
-            lineChart;
-        barChart, pieChart;
-        // DOM is ready
-        $(function () {
-            drawLineChart(); // Line Chart
-            drawBarChart(); // Bar Chart
-            drawPieChart(); // Pie Chart
+        if(typeof barChart != "undefined"){
+            Chart.defaults.global.defaultFontColor = 'white';
+            let ctxLine,
+                ctxBar,
+                ctxPie,
+                optionsLine,
+                optionsBar,
+                optionsPie,
+                configLine,
+                configBar,
+                configPie,
+                lineChart;
+            barChart, pieChart;
+            // DOM is ready
+            $(function () {
+                drawLineChart(); // Line Chart
+                drawBarChart(); // Bar Chart
+                drawPieChart(); // Pie Chart
 
-            $(window).resize(function () {
-                updateLineChart();
-                updateBarChart();                
-            });
-        })
+                $(window).resize(function () {
+                    updateLineChart();
+                    updateBarChart();                
+                });
+            })
+        }
+        
     </script>
 </body>
 </html>

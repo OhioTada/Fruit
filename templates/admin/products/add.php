@@ -7,19 +7,27 @@
         <div class="col-sm mb-2 mb-sm-0">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-no-gutter">
-              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?= __("Products"); ?></a></li>
-              <li class="breadcrumb-item active" aria-current="page"><?= __("Add Product"); ?></li>
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">
+                  <?= __("Products"); ?>
+                </a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <?= __("Add Product"); ?>
+              </li>
             </ol>
           </nav>
 
-          <h1 class="page-header-title"><?= __("Add Product"); ?></h1>
+          <h1 class="page-header-title">
+            <?= __("Add Product"); ?>
+          </h1>
 
           <div class="mt-2">
             <a class="text-body me-3" href="javascript:;">
-              <i class="bi-clipboard me-1"></i> <?= __("Duplicate"); ?>
+              <i class="bi-clipboard me-1"></i>
+              <?= __("Duplicate"); ?>
             </a>
             <a class="text-body" href="javascript:;">
-              <i class="bi-eye me-1"></i>  <?= __("Preview"); ?>
+              <i class="bi-eye me-1"></i>
+              <?= __("Preview"); ?>
             </a>
           </div>
         </div>
@@ -35,7 +43,9 @@
         <div class="card mb-3 mb-lg-5">
           <!-- Header -->
           <div class="card-header">
-            <h4 class="card-header-title"><?= __("Product information"); ?></h4>
+            <h4 class="card-header-title">
+              <?= __("Product information"); ?>
+            </h4>
           </div>
           <!-- End Header -->
 
@@ -43,9 +53,10 @@
           <div class="card-body">
             <!-- Form -->
             <div class="mb-4">
-              <label for="productNameLabel" class="form-label"><?= __("Name"); ?> <i class="bi-question-circle text-body ms-1"
-                  data-bs-toggle="tooltip" data-bs-placement="top"
-                  aria-label="Products are the goods or services you sell."></i></label>
+              <label for="productNameLabel" class="form-label">
+                <?= __("Name"); ?> <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
+                  data-bs-placement="top" aria-label="Products are the goods or services you sell."></i>
+              </label>
 
               <input type="text" class="form-control" name="productName" id="productNameLabel"
                 placeholder="Shirt, t-shirts, etc." aria-label="Shirt, t-shirts, etc." value="Tiro track jacket">
@@ -56,7 +67,9 @@
               <div class="col-sm-6">
                 <!-- Form -->
                 <div class="mb-4">
-                  <label for="SKULabel" class="form-label"><?= __("SKU"); ?> </label>
+                  <label for="SKULabel" class="form-label">
+                    <?= __("SKU"); ?>
+                  </label>
 
                   <input type="text" class="form-control" name="SKU" id="SKULabel" placeholder="eg. 348121032"
                     aria-label="eg. 348121032">
@@ -68,7 +81,9 @@
               <div class="col-sm-6">
                 <!-- Form -->
                 <div class="mb-4">
-                  <label for="weightLabel" class="form-label"><?= __("Weight"); ?></label>
+                  <label for="weightLabel" class="form-label">
+                    <?= __("Weight"); ?>
+                  </label>
 
                   <div class="input-group">
                     <input type="text" class="form-control" name="weightName" id="weightLabel" placeholder="0.0"
@@ -88,7 +103,9 @@
                     </div>
                   </div>
 
-                  <small class="form-text"><?= __("Used to calculate shipping rates at checkout and label prices during fulfillment."); ?></small>
+                  <small class="form-text">
+                    <?= __("Used to calculate shipping rates at checkout and label prices during fulfillment."); ?>
+                  </small>
                 </div>
                 <!-- End Form -->
               </div>
@@ -96,11 +113,15 @@
             </div>
             <!-- End Row -->
 
-            <label class="form-label"><?= __("Description"); ?> <span class="form-label-secondary"><?= __("(Optional)"); ?></span></label>
+            <label class="form-label">
+              <?= __("Description"); ?> <span class="form-label-secondary">
+                <?= __("(Optional)"); ?>
+              </span>
+            </label>
 
             <!-- Quill -->
             <div class="quill-custom">
-              <div id="editor-pdf"></div>
+              <?= $this->Form->control('description', ['type' => 'textarea', 'id' => 'editor', 'class' => 'editor editor-full', 'value' => '', 'label' => false]); ?>
             </div>
             <!-- End Quill -->
           </div>
@@ -112,17 +133,25 @@
         <div class="card mb-3 mb-lg-5">
           <!-- Header -->
           <div class="card-header card-header-content-between">
-            <h4 class="card-header-title">Media</h4>
+            <h4 class="card-header-title">
+              <?= __("Media"); ?>
+            </h4>
 
             <!-- Dropdown -->
             <div class="tom-select-custom">
-                    <select class="custom-select tm-select-accounts custom-select--full" id="tomselect-4">
-                      <option value="1" selected>Add media from URL</option>
-                      <option value="2">Add image from URL</option>
-                      <option value="3">Embed video</option>
-                    </select>
-                  </div>
-          
+              <select class="custom-select tm-select-accounts custom-select--full" id="tomselect-4">
+                <option value="1" selected>
+                  <?= __("Add media from URL"); ?>
+                </option>
+                <option value="2">
+                  <?= __("Add image from URL"); ?>
+                </option>
+                <option value="3">
+                  <?= __("Embed video"); ?>
+                </option>
+              </select>
+            </div>
+
             <!-- End Dropdown -->
           </div>
           <!-- End Header -->
@@ -131,14 +160,71 @@
           <div class="card-body">
             <!-- Dropzone -->
             <div id="attachFilesNewProjectLabel" class="js-dropzone dz-dropzone dz-dropzone-card dz-clickable">
-              <div class="dz-message">
-                <img class="avatar avatar-xl avatar-4x3 mb-3" src="/admin/img/oc-browse.svg"
-                  alt="Image Description" data-hs-theme-appearance="default">
-                <h5>Drag and drop your file here</h5>
+              <div class="form-block__cont form-block">
+                <?php
+                if (isset($prizeImage)):
+                  $valImageUrl01 = '';
+                  foreach ($prizeImage as $keyPrizeImage01 => $itemPrizeImage01):
+                    ?>
+                    <?php
+                    $valImageUrl01 .= isset($requestData["prizeImageUrl"]) ? pathinfo($requestData["prizeImageUrl"][$keyPrizeImage01])['basename'] . ',' : pathinfo($itemPrizeImage01['url'])['basename'] . ',';
+                    ?>
+                  <?php endforeach;
+                  $valImageUrl01 = substr_replace($valImageUrl01, "", -1) ?>
 
-                <p class="mb-2">or</p>
-
-                <span class="btn btn-white btn-sm">Browse files</span>
+                <?php endif; ?>
+                <div class="input-upload">
+                  <label class="file-select" for="input02"><span class="icon">
+                  <i class="bi bi-arrow-bar-up"></i></span></label>
+                  <span class="file-name">
+                    <span class="js-img-caption">
+                      <?= (isset($valImageUrl01) ? $valImageUrl01 : 'ファイル未選択') ?>
+                    </span>
+                    <?php echo $this->Form->control('input02', [
+                      'type' => 'file',
+                      'label' => false,
+                      'accept' => 'image/*',
+                      'multiple' => 'multiple',
+                      "class" => "js-upload-img",
+                      "data-max_length" => "20",
+                      'name' => 'input02[]',
+                    ]); ?>
+                  </span>
+                  <div class="upload-spinner none"><img src="/img/submit-spin.svg" /></div>
+                  <div class="js-change-img preview">
+                    <?php
+                    if (isset($prizeImage)):
+                      foreach ($prizeImage as $keyPrizeImage => $itemPrizeImage):
+                        ?>
+                        <?php
+                        $valImage = isset($requestData["prizeImageUrl"]) ? $requestData["prizeImageUrl"][$keyPrizeImage] : $itemPrizeImage['url'];
+                        $valImageUrl = !is_null($valImage) ? pathinfo($valImage)['basename'] : '';
+                        ?>
+                        <div class="file-img" data-number="<?= $keyPrizeImage; ?>" data-file="<?= $valImageUrl; ?>"
+                          data-id="<?= $itemPrizeImage['id']; ?>">
+                          <figure class="js-thum-figure">
+                            <figcaption>
+                              <?= $valImageUrl; ?>
+                            </figcaption>
+                            <img src="<?= $valImage ?>" alt="<?= $valImageUrl; ?>" class="thumbnail">
+                            <input type="text" hidden name="prizeImageUrl[]" class="--ss hidden" value="<?= $valImage ?>">
+                          </figure>
+                          <span class="js-delete-file"></span>
+                        </div>
+                      <?php endforeach; ?>
+                    <?php endif; ?>
+                  </div>
+                  <p class="text-error error-validate-size" style="display: none"></p>
+                  <?php
+                  if (isset($errors) && $errors) {
+                    if (isset($errors['prizeImageUrl']['validExtension'])) { ?>
+                      <p class="text-error">
+                        <?= $errors['prizeImageUrl']['validExtension'] ?>
+                      </p>
+                    <?php }
+                  } ?>
+                </div>
+                <input type="text" hidden name="img_delete" class="list-img-delete" value="" />
               </div>
             </div>
             <!-- End Dropzone -->
