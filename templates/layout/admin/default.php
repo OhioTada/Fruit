@@ -35,6 +35,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/admin/css/templatemo-style.css">
     <link rel="stylesheet" href="/admin/css/style_modify.css">
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
     
     <!--
 	Product Admin CSS Template
@@ -46,8 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </div>
-    <script src="/admin/js/jquery-3.3.1.min.js"></script>
-    <!-- https://jquery.com/download/ -->
+   
     <script src="/admin/js/moment.min.js"></script>
     <!-- https://momentjs.com/ -->
     <script src="/admin/js/Chart.min.js"></script>

@@ -25,7 +25,22 @@ class CreateProducts extends AbstractMigration
             'limit' => 256,
             'null' => false,
         ]);
+        $table->addColumn('sku', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
         $table->addColumn('image', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
+        $table->addColumn('weight', 'integer', [
+            'default' => null,
+            'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addColumn('unitWeight', 'string', [
             'default' => null,
             'limit' => 256,
             'null' => false,
@@ -35,24 +50,20 @@ class CreateProducts extends AbstractMigration
             'limit' => 11,
             'null' => false,
         ]);
-       
-        $table->addColumn('SKU', 'string', [
+        $table->addColumn('color', 'string', [
             'default' => null,
             'limit' => 256,
             'null' => false,
         ]);
-        $table->addColumn('price', 'integer', [
+        
+        $table->addColumn('size', 'string', [
             'default' => null,
-            'limit' => 11,
+            'limit' => 256,
             'null' => false,
         ]);
-        $table->addColumn('discountPercent', 'float', [
+        $table->addColumn('material', 'string', [
             'default' => null,
-            'null' => false,
-        ]);
-        $table->addColumn('weight', 'integer', [
-            'default' => null,
-            'limit' => 11,
+            'limit' => 256,
             'null' => false,
         ]);
         $table->addColumn('quantity', 'integer', [
@@ -65,12 +76,27 @@ class CreateProducts extends AbstractMigration
             'limit' => 11,
             'null' => false,
         ]);
+        $table->addColumn('price', 'integer', [
+            'default' => null,
+            'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addColumn('discountPercent', 'float', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('availability', 'integer', [
+            'default' => 0,
+            'limit' => 4,
+            'null' => false,
+        ]);
+        
         $table->addColumn('branch', 'string', [
             'default' => null,
             'limit' => 256,
             'null' => false,
         ]);
-        $table->addColumn('Collections', 'string', [
+        $table->addColumn('collections', 'string', [
             'default' => null,
             'limit' => 256,
             'null' => false,
@@ -84,11 +110,26 @@ class CreateProducts extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
+        $table->addColumn('accountId', 'integer', [
+            'default' => null,
+            'limit' => 4,
+            'null' => false,
+        ]);
+        $table->addColumn('creator', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
         $table->addColumn('created', 'datetime', [
             'default' => null,
             'null' => false,
         ]);
-        $table->addColumn('modified', 'datetime', [
+        $table->addColumn('editor', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
+        $table->addColumn('edited', 'datetime', [
             'default' => null,
             'null' => false,
         ]);
