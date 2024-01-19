@@ -207,4 +207,8 @@
 .editor-full{
   padding: 1.5em;
 }
+
+.product-add .container-fluid{
+  max-width: 90%;
+}
 /*end css modify for admin */

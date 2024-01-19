@@ -25,6 +25,8 @@ class ProductsController extends AdminController
         parent::beforeFilter($event);
         $this->now = new FrozenTime(date('Y-m-d H:i:s'));
         $this->products = $this->fetchTable('Products');
+        $result = $this->Authentication->getResult();
+        $this->userLogin = $result->getData();
     }
     /**
      * Index method
@@ -39,16 +41,26 @@ class ProductsController extends AdminController
     {
         if($this->request->getData()){
             $data = $this->request->getData();
+            // dd($data);
             $productsTable = TableRegistry::getTableLocator()->get('products');
-            $product = $productsTable->newEntities($data);
+            $product =$this->products->newEmptyEntity();
+            $product = $this->products->patchEntity($product, $data);
+            $product->accountId = $this->userLogin['id'];
+            $product->creator = $this->userLogin['email'];
+            $product->created = $this->now;
+            $product->editor = $this->userLogin['email'];
+            $product->quantitySold = 0;
+            $product->edited = $this->now;
             // dd($product);
-            // if ($productsTable->save($product)) {
-            //     $this->set('data', $data);
-            //     $this->Flash->success(__('The user has been saved.'));
-            // }else{
-            //     $this->Flash->error(__('The user could not be deleted. Please, try again.'));
-            // }
-            // $this->set('data', $data);
+            $product->accountId = $this->userLogin['id'];
+            // dd($product);
+            if ($productsTable->saveMany($product)) {
+                $this->set('data', $data);
+                $this->Flash->success(__('The user has been saved.'));
+            }else{
+                $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            }
+            $this->set('data', $data);
             
         }
     }

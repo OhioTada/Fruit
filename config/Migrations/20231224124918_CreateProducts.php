@@ -81,6 +81,11 @@ class CreateProducts extends AbstractMigration
             'limit' => 11,
             'null' => false,
         ]);
+        $table->addColumn('unitPrice', 'string', [
+            'default' => null,
+            'limit' => 256,
+            'null' => false,
+        ]);
         $table->addColumn('discountPercent', 'float', [
             'default' => null,
             'null' => false,

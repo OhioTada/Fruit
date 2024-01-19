@@ -33,6 +33,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link href="/admin/css/theme.css" rel="stylesheet">
     <link href="/admin/css/vendor.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <?= $this->Html->css('/admin/js/calendar/calendar.css') ?>
     <link rel="stylesheet" href="/admin/css/templatemo-style.css">
     <link rel="stylesheet" href="/admin/css/style_modify.css">
     <script src="/admin/js/jquery-3.3.1.min.js"></script>
@@ -60,6 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
     <?= $this->Html->script('/admin/js/jquery.validate.min.js') ?>
+    <?= $this->Html->script('/admin/js/calendar/calendar.js') ?>
     <script src="/admin/js/setting.js"></script>
     <script>
         if(typeof barChart != "undefined"){

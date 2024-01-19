@@ -186,4 +186,19 @@ $('.js-create-field').on('click', function (e) {
     var $content = $('#addAnotherOptionFieldTemplate').html();
     console.log($content);
     $('#addAnotherOptionFieldContainer').append($content);
-})
+});
+
+$('.js-availability').on('click', function(){
+    if($(this).is(':checked')){
+        $(this).val('1');
+        console.log("only Test");
+    }else{
+        $(this).val('0');
+    }
+});
+//datepicker
+$('#js-datepicker-from01').calendar({
+    trigger: '#expireDate,.dbusageFromDate',
+    weekArray: ['日', '月', '火', '水', '木', '金', '土'],
+    startWeek: 1,
+});

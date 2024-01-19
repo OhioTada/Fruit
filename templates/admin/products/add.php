@@ -253,9 +253,9 @@
               </label>
 
               <div class="input-group">
-                <input type="text" class="form-control" name="priceName" id="priceNameLabel"
+                <input type="text" class="form-control" name="price" id="priceNameLabel"
                   placeholder="<?= __("0.00"); ?>"
-                  value="<?= (isset($data['priceName'])) ? $data['priceName'] : ''; ?>">
+                  value="<?= (isset($data['price'])) ? $data['price'] : ''; ?>">
 
                 <div class="input-group-append">
                   <!-- Select -->
@@ -265,17 +265,28 @@
                       'VND' => 'VND',
                       'USD' => 'USD',
                       'JPY' => 'JPY',
-                      'Euro' => 'Euro'
+                      'Euro' => 'EURO'
                     ];
                     echo $this->Form->select(
-                      'unitCountry',
+                      'unitPrice',
                       $arrUnitCountry,
-                      ['default' => '' . (isset($data['unitCountry'])) ? $data['unitCountry'] : 'VND' . '', 'class' => 'custom-select tm-select-accounts custom-select--full'],
+                      ['default' => '' . (isset($data['unitPrice'])) ? $data['unitPrice'] : 'VND' . '', 'class' => 'custom-select tm-select-accounts custom-select--full'],
                     );
                     ?>
                   </div>
                   <!-- End Select -->
                 </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="discountPercentNameLabel" class="form-label">
+                <?= __("discountPercent"); ?>
+              </label>
+
+              <div class="input-group">
+                <input type="text" class="form-control" name="discountPercent" id="discountPercentNameLabel"
+                  placeholder="<?= __("0.00"); ?>"
+                  value="<?= (isset($data['discountPercent'])) ? $data['discountPercent'] : ''; ?>">
               </div>
             </div>
             <!-- End Form -->
@@ -290,7 +301,7 @@
                 </span>
               </span>
               <span class="col-4 col-sm-3 text-end">
-                <input type="checkbox" class="form-check-input" id="availabilitySwitch1" name="availability"
+                <input type="checkbox" class="form-check-input js-availability" id="availabilitySwitch1" name="availability"
                   value="<?= (isset($data['availability']) ? $data['availability'] : '0') ?>">
               </span>
             </label>
@@ -331,9 +342,9 @@
 
               <!-- Select -->
               <div class="tom-select-custom">
-                <select class="custom-select tm-select-accounts custom-select--full" id="category">
-                  <option value="domestic" selected>domestic</option>
-                  <option value="import">import</option>
+                <select class="custom-select tm-select-accounts custom-select--full" id="category" name = "categoryId">
+                  <option value="1" selected><?= __("domestic"); ?></option>
+                  <option value="2"><?= __("import"); ?></option>
 
                 </select>
               </div>
@@ -357,9 +368,9 @@
                   'Clothing' => 'Clothing'
                 ];
                 echo $this->Form->select(
-                  'category',
+                  'collections',
                   $arrCategory,
-                  ['default' => '' . (isset($data['category'])) ? $data['category'] : 'VND' . '', 'class' => 'custom-select tm-select-accounts custom-select--full'],
+                  ['default' => '' . (isset($data['collections'])) ? $data['collections'] : 'Spring' . '', 'class' => 'custom-select tm-select-accounts custom-select--full'],
                 );
                 ?>
 
@@ -376,18 +387,20 @@
                 <?= __("Tags"); ?>
               </label>
 
-              <input type="text" class="form-control" name="tagsProduct" id="tagsLabel"
+              <input type="text" class="form-control" name="tags" id="tagsLabel"
                 placeholder="<?= __("Enter tags here"); ?>"
-                value="<?= (isset($data['tagsProduct'])) ? $data['tagsProduct'] : ''; ?>">
+                value="<?= (isset($data['tags'])) ? $data['tags'] : ''; ?>">
             </div>
 
             <div>
               <label for="expireDate" class="form-label">
                 <?= __("Expire Date"); ?>
               </label>
-              <input type="text" class="form-control" name="expireDate" id="expireDate"
+              <input type="text" class="form-control datePick" name="expireDate" id="expireDate"
                 placeholder="<?= __("Enter Expire Date"); ?>"
                 value="<?= (isset($data['expireDate'])) ? $data['expireDate'] : ''; ?>">
+                <div class="input-date" id="js-datepicker-from01"></div>
+						    <div class="input-date" id="js-datepicker-to01"></div>
             </div>
 
           </div>
