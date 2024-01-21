@@ -396,11 +396,12 @@
               <label for="expireDate" class="form-label">
                 <?= __("Expire Date"); ?>
               </label>
-              <input type="text" class="form-control datePick" name="expireDate" id="expireDate"
+              <div class="calendar-wrap">
+                <input type="text" class="form-control datePick" name="expireDate" id="expireDate"
                 placeholder="<?= __("Enter Expire Date"); ?>"
                 value="<?= (isset($data['expireDate'])) ? $data['expireDate'] : ''; ?>">
-                <div class="input-date" id="js-datepicker-from01"></div>
-						    <div class="input-date" id="js-datepicker-to01"></div>
+              </div>
+              
             </div>
 
           </div>

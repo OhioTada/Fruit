@@ -197,8 +197,8 @@ $('.js-availability').on('click', function(){
     }
 });
 //datepicker
-$('#js-datepicker-from01').calendar({
-    trigger: '#expireDate,.dbusageFromDate',
-    weekArray: ['日', '月', '火', '水', '木', '金', '土'],
-    startWeek: 1,
-});
+
+$( function() {
+    $( "#expireDate" ).datepicker();
+  } );
+

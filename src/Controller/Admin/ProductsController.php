@@ -51,9 +51,10 @@ class ProductsController extends AdminController
             $product->editor = $this->userLogin['email'];
             $product->quantitySold = 0;
             $product->edited = $this->now;
-            // dd($product);
+            $valImg =  $this->products->uploadFile($this->request->getData('image'));
+            $product->image = '/uploads/'.$this->request->getData('image')->getClientFilename();
             $product->accountId = $this->userLogin['id'];
-            // dd($product);
+            dd($product);
             if ($productsTable->saveMany($product)) {
                 $this->set('data', $data);
                 $this->Flash->success(__('The user has been saved.'));

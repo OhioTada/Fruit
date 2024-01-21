@@ -59,9 +59,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="/admin/js/tooplate-scripts.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
     <?= $this->Html->script('/admin/js/jquery.validate.min.js') ?>
-    <?= $this->Html->script('/admin/js/calendar/calendar.js') ?>
+    <!-- <?= $this->Html->script('/admin/js/calendar/calendar.js') ?> -->
     <script src="/admin/js/setting.js"></script>
     <script>
         if(typeof barChart != "undefined"){

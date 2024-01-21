@@ -211,4 +211,10 @@
 .product-add .container-fluid{
   max-width: 90%;
 }
+.calendar-wrap{
+  position: relative;
+}
+#datepicker{
+  display: none;
+}
 /*end css modify for admin */
