@@ -111,7 +111,7 @@ class CreateProducts extends AbstractMigration
             'limit' => 256,
             'null' => false,
         ]);
-        $table->addColumn('expireDate', 'timestamp', [
+        $table->addColumn('expireDate', 'date', [
             'default' => null,
             'null' => false,
         ]);
